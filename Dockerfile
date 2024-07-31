@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/runtime:8.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0
 
 WORKDIR /app
 
@@ -10,4 +10,4 @@ RUN dotnet publish -o out
 
 EXPOSE 5000
 
-CMD ["dotnet", "out/*.dll"] 
+CMD ["dotnet", "/app/out/dotnet.dll"]
